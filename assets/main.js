@@ -15,6 +15,13 @@ function newparty() {
 function deleteRow(row) {
     const docRow = document.getElementById(row);
     docRow.parentNode.removeChild(docRow);
+
+    if (partyCount == 11) {
+        document.getElementById("addPartyButton").removeAttribute("disabled");
+        document.getElementById("addPartyButton").removeAttribute("title");
+    }
+    
+    partyCount -= 1;
 }
 
 function partyInfoOrderer() {
