@@ -1,4 +1,4 @@
-# Parliament-Seats-Generator
+# Parliament Seats Generator
 Allows you to generate a seat diagram of the New Zealand parliament with party seats shown.
 
 ## Example
