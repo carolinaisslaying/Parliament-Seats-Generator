@@ -30,15 +30,13 @@ function partyInfoOrderer() {
             let colour = document.getElementById(`colour${id}`).value;
             let seats = Number(document.getElementById(`seats${id}`).value);
             
-            partyOrder.push({acronym: acronym, colour: colour, seats: seats})
+            partyOrder.push({acronym: acronym, colour: colour, seats: seats});
         }   
     }
 
     partyOrder.sort((a, b) => {
         return b.seats-a.seats
     });
-
-    console.log(partyOrder)
 
     for (let i = 0; i < partyOrder.length; i++) {
         partyInfo(partyOrder[i].acronym, partyOrder[i].colour, partyOrder[i].seats)
@@ -50,12 +48,12 @@ function partyInfo(acronym, colour, seats) {
     var tspan = document.createElementNS(NS, "tspan");
     tspan.appendChild(document.createTextNode((`${acronym} ${seats}`)));
 
-    tspan.setAttribute("x", "50%")
-    tspan.setAttribute("dy", "1.2em")
-    tspan.setAttribute("fill", colour)
-    tspan.setAttribute("font-weight", "bold")
+    tspan.setAttribute("x", "50%");
+    tspan.setAttribute("dy", "1.2em");
+    tspan.setAttribute("fill", colour);
+    tspan.setAttribute("font-weight", "bold");
 
-    document.getElementById("partyinfo-texts").appendChild(tspan)
+    document.getElementById("partyinfo-texts").appendChild(tspan);
 }
 
 function fillmap() {
@@ -69,7 +67,7 @@ function fillmap() {
             let id = Number(party.getElementsByClassName("partyid")[0].value);
             let order = Number(document.getElementById(`order${id}`).value);
             
-            partyOrder.push({id: id, order: order})
+            partyOrder.push({id: id, order: order});
         }   
     }
 
@@ -97,6 +95,7 @@ function fillmap() {
             if (filledSeats < Number((seat.id).substring(4))) {
                 if (seatsItr < seats.value) {
                     seat.style.fill = colour.value;
+                    seat.innerHTML = `<title>${name.value} Party</title>`;
                     seatsItr += 1;
                     filledSeats += 1;
                 }
