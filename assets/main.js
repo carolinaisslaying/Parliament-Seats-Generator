@@ -56,7 +56,25 @@ function partyInfo(acronym, colour, seats) {
     document.getElementById("partyinfo-texts").appendChild(tspan);
 }
 
+function clearMap() {
+    var seatsItr = 1;
+
+    for (const seat of document.getElementById("pog").getElementsByTagName("circle")) {
+        if (seatsItr <= 120) {
+            seatsItr += 1;
+            seat.style.fill = "#c9c9c9";
+            seat.innerHTML = "";
+        } else if (seatsItr > 120 && seatsItr <= 124) {
+            seatsItr += 1;
+            seat.style.fill = "white";
+            seat.innerHTML = "";
+        }
+    }
+}
+
 function fillmap() {
+    clearMap();
+
     const partyOrder = [];
     var orderItr = -1;
 
