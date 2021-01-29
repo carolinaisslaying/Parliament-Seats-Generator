@@ -1,0 +1,19 @@
+form {
+    display: flex; 
+    flex-direction: row;
+}
+
+label, input {
+    display: block; 
+}
+
+table { 
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.partyColour {
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
