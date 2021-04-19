@@ -12,7 +12,8 @@
             <div class="columns">
                 <div class="column is-half">
                     <div class="section">
-                        <h1 class="is-size-3">NZ Parliament Seat Calculator</h1>
+                        <h1 class="is-size-3" style="color: #212529; font-weight: bold;">NZ Parliament Seat Calculator</h1>
+                        <h1 class="subtitle" style="color: #212529;">Pāremata Aotearoa Seat Calculator</h1>
                         <br />
                         <div class="partyinputs-div">
                             <form>
@@ -36,32 +37,61 @@
                             <br />
                             <button id="addPartyButton" onclick="newparty();">Add Party</button>
                             <button id="fillMapButton" onclick="fillmap();">Fill Seatmap</button>
+                            <button id="dlSeatMap" onclick="generateMapDownload('seatmap.svg', document.getElementById('seatMapSVG').innerHTML);">Download Current Seatmap (SVG)</button>
+                            <a id="dlSeatMapPNG"><button>Download Current Seatmap (PNG)</button></a>
                         </div>
                         <br />
                         <div>
                             <h3 class="is-size-5">Party Colours</h3>
-                            <table style="width:90%" id="partyinputs-table">
+                            <table>
+                                <table id="partyinputs-table">
                                 <tr>
-                                    <th><p class="partyColour" style="background-color: #D82A20; color: white;">Labour - #D82A20</p></th>
-                                    <th><p class="partyColour" style="background-color: #00529F; color: white;">National - #00529F</p></th>
-                                    <th><p class="partyColour" style="background-color: #098137; color: white;">Greens - #098137</p></th>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #D82A20;"></span></th>
+                                    <th>Labour Party - #D82A20</th>
                                 </tr>
                                 <tr>
-                                    <th><p class="partyColour" style="background-color: #FDE401; color: black;">ACT - #FDE401</p></th>
-                                    <th><p class="partyColour" style="background-color: #B2001A; color: white;">Māori - #B2001A</p></th>
-                                    <th><p class="partyColour" style="background-color: black; color: white;">NZ First - #000000</p></th>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #00529F;"></span></th>
+                                    <th>National Party - #00529F</th>
                                 </tr>
                                 <tr>
-                                    <th><p class="partyColour" style="background-color: #32DAC3; color: black;">TOP - #32DAC3</p></th>
-                                    <th><p class="partyColour" style="background-color: #00AEEF; color: white;">New Cons. - #00AEEF</p></th>
-                                    <th><p class="partyColour" style="background-color: #1987D1; color: white;">Advance - #00AEEF</p></th>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #098137;"></span></th>
+                                    <th>Green Party - #098137</th>
                                 </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #FDE401;"></span></th>
+                                    <th>ACT - #FDE401</th>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #B2001A;"></span></th>
+                                    <th>Māori Party - #B2001A</th>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #000000;"></span></th>
+                                    <th>NZ First - #000000</th>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #32DAC3;"></span></th>
+                                    <th>The Opportunities Party - #32DAC3</th>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #00AEEF;"></span></th>
+                                    <th>New Conservative - #00AEEF</th>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #1987D1;"></span></th>
+                                    <th>Advance NZ - #1987D1</th>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align: middle;"><span class="partyDot" style="background-color: #400040;"></span></th>
+                                    <th>United Future - #400040</th>
+                                </tr>
+                            </table>
                             </table>
                         </div>
                     </div>
                 </div>
-                <div class="column is-half">
-                    <svg id="pog" viewBox="0 0 300 344" style="width: 100%;">
+                <div class="column is-half" id="seatMapSVG">
+                    <svg id="pog" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="660" height="757" viewBox="0 0 300 344" style="width: 100%;">
                         <text x="50%" y="10%" dominant-baseline="middle" text-anchor="middle" id="partyinfo-texts"></text>
                         <circle id="seat1" r="7" transform="translate(79,25)" fill="#c9c9c9"></circle>
                         <circle id="seat2" r="7" transform="translate(60,25)" fill="#c9c9c9"></circle>

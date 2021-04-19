@@ -17,3 +17,21 @@ table {
     border-radius: 10px;
     text-align: center;
 }
+
+.partyDot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#pog {
+    margin-top: 5%;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
