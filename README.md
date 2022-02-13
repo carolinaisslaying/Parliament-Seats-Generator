@@ -6,4 +6,4 @@ Here is an example of the paged filled out, showing the current New Zealand parl
 
 The party colours area is there just for ease of use, if you need a certain party's colour you can look at that and type it in.
 
-![](https://cdn.discordapp.com/attachments/363952832099123200/804558033648615464/unknown.png)
+![](https://cdn.discordapp.com/attachments/902833900831780885/942280411998978078/unknown.png)
