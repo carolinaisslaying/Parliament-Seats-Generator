@@ -3,7 +3,7 @@ var partyCount = 1;
 function newparty() {
     if (partyCount <= 10) {
         partyCount += 1;
-        $("#partyinputs-table").append(`<tr id="partyTR${partyCount}"><td><input type="text" id="party${partyCount}"/></td><td><input type="text" maxlength="3" onkeyup="this.value = this.value.toUpperCase();" id="acronym${partyCount}"/></td><td><input type="color" id="colour${partyCount}"/></td><td><input type="number" id="seats${partyCount}" max="120" value="0" style="width: 50px;"/></td><td><input type="number" id="order${partyCount}" max="11" value="${partyCount}" style="width: 50px;"/><input type="hidden" value="${partyCount}" class="partyid"></input></td></td><td onclick="deleteRow('partyTR${partyCount}');" style="cursor: pointer;"><i class="fas fa-trash-alt"></i></td></tr>`)
+        $("#partyinputs-table").append(`<tr id="partyTR${partyCount}"><td><input type="text" class="input is-small" id="party${partyCount}"/></td><td><input class="input is-small" type="text" maxlength="3" onkeyup="this.value = this.value.toUpperCase();" id="acronym${partyCount}"/></td><td><input class="input is-small" type="color" id="colour${partyCount}"/></td><td><input class="input is-small" type="number" id="seats${partyCount}" onkeyup="maxNumberFix('seats${partyCount}', 0, 120);" min="0" max="120" value="0" style="width: 50px;"/></td><td><input class="input is-small" type="number" id="order${partyCount}" onkeyup="maxNumberFix('order${partyCount}', 1, 11);" min="1" max="11" value="${partyCount}" style="width: 50px;"/><input type="hidden" value="${partyCount}" class="partyid"></input></td></td><td onclick="deleteRow('partyTR${partyCount}');" style="cursor: pointer;"><i class="fas fa-trash-alt has-text-danger"></i></td></tr>`)
     
         if (partyCount == 11) {
             document.getElementById("addPartyButton").setAttribute("disabled", true);
@@ -240,3 +240,8 @@ function SVGToPNG(svg) {
     });
 }
 
+function maxNumberFix(id, min, max) {
+    const element = document.getElementById(id).value;
+    if (element > max) document.getElementById(id).value = max;
+    if (element < min) document.getElementById(id).value = min;
+}
