@@ -13,8 +13,9 @@ And an example of the equation applied to the 54th Parliament elected by the 202
 > Threshold percentage = $$\frac{1}{123} \times 100 \approx 0.813$$
 
 ## Example
-Here is an example of the paged filled out, showing the current Aotearoa New Zealand parliament layout after the 2020 general election.
+Here is an example of the paged filled out, showing the current Aotearoa New Zealand parliament layout after the 2023 general election.
 
 The party colours area is there just for ease of use, if you need a certain party's colour you can look at that and type it in.
 
-![](https://cdn.discordapp.com/attachments/902833900831780885/942280411998978078/unknown.png)
+![seatmap](https://github.com/user-attachments/assets/62291de2-bbe8-4c50-a81a-8c574d669290)
+
