@@ -6,10 +6,11 @@ Every party that gained over 0.813% of the vote in the 2023 general election is 
 
 The equation is as follows:
 
-![Threshold percentage = (1 ÷ Total number of seats) x 100](https://i.imgur.com/On2zKeY.png)
+> Threshold percentage = $$\frac{1}{\text{total seats}} \times 100$$
 
 And an example of the equation applied to the 54th Parliament elected by the 2023 general election:
-![Threshold percentage = (1 ÷ 123) x 100 ≈ 0.813](https://i.imgur.com/Cs3RcB9.png)
+
+> Threshold percentage = $$\frac{1}{123} \times 100 \approx 0.813$$
 
 ## Example
 Here is an example of the paged filled out, showing the current Aotearoa New Zealand parliament layout after the 2020 general election.
